@@ -1,0 +1,28 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>ESTE ES EL TITULO DE FAMILIARES</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<!-- {% if familiar1.nombre == "Jose" %}
+<h2>Nombre=  {{ familiar1.nombre }} Edad= {{ familiar1.edad }} Nacimiento= {{ familiar1.anio_nacimiento }}</h2>
+{% endif %}
+{% if familiar2.nombre == "Jose" %}
+<h2>Nombre=  {{ familiar2.nombre }} Edad= {{ familiar2.edad }} Nacimiento= {{ familiar2.anio_nacimiento }}</h2>
+{% endif %}
+{% if familiar3.nombre == "Jose" %}
+<h2>Nombre=  {{ familiar3.nombre }} Edad= {{ familiar3.edad }} Nacimiento= {{ familiar3.anio_nacimiento }}</h2>
+{% endif %} -->
+
+{% for familiar in familiares %}
+    {% if familiar.nombre == "Alicia" %}
+    <h2>Nombre=  {{ familiar.nombre }} Edad= {{ familiar.edad }} Nacimiento= {{ familiar.anio_nacimiento }}</h2>
+    {% endif %}
+{% endfor %}
+
+{% endblock%}
+
